@@ -6,5 +6,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 installGlobals();
 
 export default defineConfig({
-  plugins: [remix(), tsconfigPaths()],
+  plugins: [!process.env.VITEST && remix(), tsconfigPaths()],
+  test: {
+    environment: "happy-dom", // or 'jsdom', 'node'
+  },
 });
