@@ -5,6 +5,21 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import resetStyles from "~/styles/reset.css?url";
+import themeStyles from "~/styles/theme.css?url";
+import typographyStyles from "~/styles/typography.css?url";
+import layoutStyles from "~/styles/layout.css?url";
+import { LinkDescriptor } from "@remix-run/node";
+import HeaderNavigation from "./components/HeaderNavigation";
+
+export function links(): Array<LinkDescriptor> {
+  return [
+    { rel: "stylesheet", href: resetStyles },
+    { rel: "stylesheet", href: themeStyles },
+    { rel: "stylesheet", href: typographyStyles },
+    { rel: "stylesheet", href: layoutStyles },
+  ];
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,7 +31,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <HeaderNavigation />
+        <main>
+          <section>{children}</section>
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>

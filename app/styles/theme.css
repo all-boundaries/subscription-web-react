@@ -1,0 +1,47 @@
+:root,
+::backdrop {
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --standard-border-radius: 5px;
+
+  /* https://www.reasonable.work/colors/ */
+  --color-gray-1: rgb(246, 246, 246);
+  --color-gray-2: rgb(226, 226, 226);
+  --color-gray-3: rgb(139, 139, 139);
+  --color-gray-4: rgb(111, 111, 111);
+  --color-gray-5: rgb(62, 62, 62);
+  --color-gray-6: rgb(34, 34, 34);
+
+  --color-aquamarine-1: rgb(218, 255, 239);
+  --color-aquamarine-2: rgb(66, 255, 198);
+  --color-aquamarine-3: rgb(0, 159, 120);
+  --color-aquamarine-4: rgb(0, 127, 95);
+  --color-aquamarine-5: rgb(0, 71, 52);
+  --color-aquamarine-6: rgb(0, 40, 27);
+
+  --color-rose-1: rgb(255, 247, 249);
+  --color-rose-2: rgb(255, 220, 229);
+  --color-rose-3: rgb(255, 59, 141);
+  --color-rose-4: rgb(219, 0, 114);
+  --color-rose-5: rgb(128, 0, 64);
+  --color-rose-6: rgb(76, 0, 35);
+
+  --bg: #fff;
+  --accent-bg: var(--color-aquamarine-4);
+  --text: var(--color-gray-6);
+  --text-light: var(--color-gray-5);
+  --border: var(--color-aquamarine-6);
+  --accent: var(--color-rose-4);
+  --accent-hover: var(--color-rose-2);
+  --accent-text: var(--bg);
+  --marked: var(--color-rose-1);
+  --disabled: var(--color-gray-1);
+
+  --header-height: 5rem;
+  --body-padding: 2rem;
+  --footer-height: 16rem;
+  --nav-width: 16rem;
+  --main-width: 70%;
+  --main-max-width: 800px;
+}

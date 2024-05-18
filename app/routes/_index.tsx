@@ -9,8 +9,10 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Coffee Subscription</h1>
+    <div>
+      <h1>
+        <mark>Welcome</mark>, enjoy what's in here.
+      </h1>
     </div>
   );
 }
