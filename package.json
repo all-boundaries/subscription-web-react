@@ -12,6 +12,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@pact-foundation/pact": "^12.5.0",
     "@remix-run/node": "^2.9.1",
     "@remix-run/react": "^2.9.1",
     "@remix-run/serve": "^2.9.1",
