@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--body-padding);
+
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.container li {
+  margin: auto;
+  padding: var(--body-padding);
+  width: 300px;
+  height: 350px;
+  background-color: var(--color-aquamarine-3);
+
+  border: 2px solid var(--color-aquamarine-5);
+}
