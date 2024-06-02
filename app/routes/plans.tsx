@@ -1,15 +1,19 @@
-import { LinkDescriptor } from "@remix-run/node";
+import { LinkDescriptor, json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { allPlans } from "~/gateways/subscription_api_client.server";
 import styles from "~/styles/plans.css?url";
 
 export function links(): Array<LinkDescriptor> {
   return [{ rel: "stylesheet", href: styles }];
 }
 
+export async function loader() {
+  const { data } = await allPlans();
+  return json({ plans: data });
+}
+
 export default function Plans() {
-  const plans = [
-    { id: "id-1", name: "Explorer" },
-    { id: "id-2", name: "Curious" },
-  ];
+  const { plans } = useLoaderData<typeof loader>();
 
   const allPlans = plans.map((plan) => (
     <li key={plan.id}>

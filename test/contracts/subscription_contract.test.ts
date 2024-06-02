@@ -1,7 +1,7 @@
 import path from "path";
 import { MatchersV3, PactV4 } from "@pact-foundation/pact";
 import { describe, expect, it } from "vitest";
-import { allPlans } from "~/gateways/subscription_api_client";
+import { allPlans } from "~/gateways/subscription_api_client.server";
 
 const provider = new PactV4({
   dir: path.resolve(process.cwd(), "build/pacts"),
