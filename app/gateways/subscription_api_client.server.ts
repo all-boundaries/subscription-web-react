@@ -13,3 +13,18 @@ export async function allPlans(
     headers: { accept: "application/json" },
   }).then((r) => r.json());
 }
+
+export async function subscribe(
+  planId: string,
+  baseUrl = envConfigServer.VITE_SVC_SUBSCRIPTION_URL
+) {
+  const subscribeUrl = new URL("/subscriptions", baseUrl);
+  return fetch(subscribeUrl, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      accept: "application/json",
+    },
+    body: JSON.stringify({ planId: planId }),
+  });
+}
